@@ -86,7 +86,7 @@ That should return nothing. If it returns a line, that link is unmonetised.
 
 **2. The links, once you have picks.** See point 3 above.
 
-**3. The palette, if you want to.** Every colour is a variable at the top of `style.css`. Change a hex value once and it changes everywhere. Nothing else needs editing.
+**3. The palette, if you want to.** Every color is a variable at the top of `style.css`. Change a hex value once and it changes everywhere. Nothing else needs editing.
 
 ---
 
@@ -95,3 +95,32 @@ That should return nothing. If it returns a line, that link is unmonetised.
 No numbered top-ten lists, because a top-ten list is a format that has to be filled whether or not ten things deserve the slot. No newsletter wall. No hardcoded product picks that rot. Each guide explains what a good one looks like on the label, and points at a search so the reader compares current prices themselves.
 
 Every guide carries a "who should skip it" section. That is the thing that makes the site worth linking to, and it is the first thing that will be tempting to cut. Do not cut it.
+
+---
+
+## The mascot
+
+`mascot.svg` — a baby sitting in a coconut half. Vector, so it stays sharp at any size and weighs 2.5KB. It appears in the masthead (36px) and the footer (60px). `favicon.svg` is a simplified version for the browser tab.
+
+Skin tone is `#F0C9A8`, appearing twice in `mascot.svg` and once in `favicon.svg`. Search and replace to change it.
+
+The mascot is deliberately kept away from the safe-sleep panel in the nursery guide and the feeding warning. Cartoon next to a safety warning undercuts the warning.
+
+## Photography
+
+Each guide has a commented-out photo slot ready to go. To switch one on: drop the JPEG in the folder, then delete the two comment lines around the `<figure>`. Styling is automatic.
+
+| File to add | Page | Shot |
+|---|---|---|
+| `coconut-oil-jar.jpg` | Skin oil | Open jar of virgin coconut oil, solid and white, side light |
+| `unlabeled-bottle.jpg` | Balms | Plain white unlabeled bottle and glass jar, pale background |
+| `coir-fiber.jpg` | Nursery | Loose coir fiber, coarse texture, raking light |
+| `coconut-halves.jpg` | Feeding | A coconut split in half, cream background |
+| `folded-bodysuits.jpg` | Clothes | Stack of folded cotton bodysuits in soft colors |
+
+1200px wide, under 200KB each, shot on a plain pale background so they sit inside the pastel palette.
+
+**Two rules that are not style preferences:**
+
+1. **Never save or hotlink an Amazon product image.** Under the Associates operating agreement product images must come through SiteStripe or the Product Advertising API. Scraping listing photos is a common way affiliate accounts get closed.
+2. **No photographs of real babies** unless you hold a commercial license and a model release. Subject photography — coconuts, fiber, folded clothes — carries neither risk and suits the brand better.

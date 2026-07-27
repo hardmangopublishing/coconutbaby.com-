@@ -218,3 +218,38 @@ section.tight { padding: 2.4rem 0 0.5rem; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* ---------- Mascot ---------- */
+
+.masthead > .wrap > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.mascot-mark { display: block; }
+
+.mascot-foot {
+  display: block;
+  margin-bottom: 0.75rem;
+  opacity: 0.95;
+}
+
+/* ---------- Photography slots ----------
+   Drop a JPEG into the folder, uncomment the <figure> in the page,
+   and it styles itself. Images should be 1200px wide, under 200KB.
+   ------------------------------------------------------------- */
+
+figure.shot { margin: 2.2rem 0; }
+figure.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  background: var(--cream);
+}
+figure.shot figcaption {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+  margin-top: 0.6rem;
+  line-height: 1.5;
+}

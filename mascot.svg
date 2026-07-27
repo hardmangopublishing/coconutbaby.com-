@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="A smiling baby sitting in a coconut half">
+  <title>Coconut Baby</title>
+
+  <!-- ============================================================
+       Coconut Baby mascot
+       Skin tone is the one variable most likely to change:
+       search for #F0C9A8 and replace both occurrences.
+       Palette matches style.css.
+       ============================================================ -->
+
+  <defs>
+    <clipPath id="bowlClip">
+      <path d="M26,122 A74,72 0 0 0 174,122 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- coconut shell -->
+  <path d="M26,122 A74,72 0 0 0 174,122 Z" fill="#8B6142"/>
+  <path d="M26,122 A74,72 0 0 0 174,122 Z" fill="none" stroke="#6F4B32" stroke-width="3"/>
+
+  <!-- shell fibre texture -->
+  <g clip-path="url(#bowlClip)" stroke="#6F4B32" stroke-width="2.5" stroke-linecap="round" opacity="0.45">
+    <path d="M56,140 q6,16 2,32"/>
+    <path d="M86,152 q5,15 1,30"/>
+    <path d="M116,152 q-5,15 -1,30"/>
+    <path d="M146,140 q-6,16 -2,32"/>
+  </g>
+
+  <!-- inner flesh -->
+  <ellipse cx="100" cy="122" rx="74" ry="13" fill="#FDFAF5"/>
+  <ellipse cx="100" cy="123" rx="64" ry="9" fill="#F1E7D8"/>
+
+  <!-- baby -->
+
+  <!-- onesie -->
+  <path d="M74,112 q26,-12 52,0 l4,26 h-60 Z" fill="#A9CBB5"/>
+
+  <!-- ears -->
+  <circle cx="60" cy="90" r="9" fill="#F0C9A8"/>
+  <circle cx="140" cy="90" r="9" fill="#F0C9A8"/>
+
+  <!-- head -->
+  <circle cx="100" cy="86" r="40" fill="#F0C9A8"/>
+
+  <!-- hair curl -->
+  <path d="M95,48 C 95,33 117,32 112,47" fill="none" stroke="#8B6142" stroke-width="6.5" stroke-linecap="round"/>
+
+  <!-- closed happy eyes -->
+  <path d="M78,86 q9,-10 18,0" fill="none" stroke="#37423B" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M104,86 q9,-10 18,0" fill="none" stroke="#37423B" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- cheeks -->
+  <ellipse cx="74" cy="101" rx="10" ry="6.5" fill="#F2A98A" opacity="0.7"/>
+  <ellipse cx="126" cy="101" rx="10" ry="6.5" fill="#F2A98A" opacity="0.7"/>
+
+  <!-- smile -->
+  <path d="M92,104 q8,9 16,0" fill="none" stroke="#37423B" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- front lip of the shell, drawn over the baby -->
+  <path d="M26,122 A74,13 0 0 0 174,122 Z" fill="#FDFAF5"/>
+  <path d="M26,122 A74,13 0 0 0 174,122" fill="none" stroke="#E4D8C6" stroke-width="2"/>
+
+  <!-- hands gripping the rim -->
+  <circle cx="52" cy="120" r="9.5" fill="#F0C9A8"/>
+  <circle cx="148" cy="120" r="9.5" fill="#F0C9A8"/>
+</svg>
