@@ -1,0 +1,97 @@
+# coconutbaby.com
+
+A static site. No build step, no dependencies, no framework. Edit the HTML, push, and it is live in about a minute.
+
+```
+index.html                   home — the four guides, how the site works
+coconut-oil-baby-skin.html   guide one
+balms-and-lotions.html       guide two
+coir-nursery.html            guide three
+feeding-and-weaning.html     guide four
+style.css                    all styling (the palette is set at the top)
+CNAME                        tells GitHub which domain to serve
+README.md                    this file
+```
+
+Flat structure, no subfolders — every file uploads from an iPad in one drag.
+
+---
+
+## Put it online (about 20 minutes, once)
+
+### 1. Make the repository
+
+On GitHub, create a new **public** repository named `coconutbaby.com`.
+
+Upload every file in this folder: **Add file → Upload files**, then drag them all in at once.
+
+### 2. Turn on Pages
+
+**Settings → Pages**. Source: `Deploy from a branch`. Branch: `main`, folder `/ (root)`. Save.
+
+Wait a minute, then check the `github.io` URL it gives you. The site should be there.
+
+### 3. Point the domain at it
+
+In your registrar's DNS panel, delete any existing `A` records for `@` and any `CNAME` for `www`. Then add:
+
+| Type | Name | Value | TTL |
+|---|---|---|---|
+| A | @ | 185.199.108.153 | 1 hour |
+| A | @ | 185.199.109.153 | 1 hour |
+| A | @ | 185.199.110.153 | 1 hour |
+| A | @ | 185.199.111.153 | 1 hour |
+| CNAME | www | <your-github-username>.github.io | 1 hour |
+
+Those four IPs are GitHub's. If the site does not come up, check GitHub's current list in their Pages documentation.
+
+### 4. Tell GitHub about the domain
+
+**Settings → Pages → Custom domain** → enter `coconutbaby.com` → save. The `CNAME` file already contains it. Wait for the DNS check to pass, then tick **Enforce HTTPS**. Do not skip that.
+
+---
+
+## The Amazon Associates side
+
+Everything on this site is monetised through the Associates account and nothing else. There are no other affiliate networks, no direct cart, no sponsored placements.
+
+**1. Add the domain to your Associates account before the site goes live.** In Associates Central: **Account Settings → Manage Your Websites**. Amazon requires every site you place links on to be listed there. Links on an unlisted domain are a compliance problem, not a technicality.
+
+**2. Every outbound product link already carries `tag=peteragro-20`.** Verify after any edit:
+
+```bash
+grep -o 'amazon\.com[^"]*' *.html | grep -v 'tag=peteragro-20'
+```
+
+That should return nothing. If it returns a line, that link is unmonetised.
+
+**3. The links are category searches, not fixed products, on purpose.** A hardcoded pick goes stale within a season — formulas change, sellers go out of stock, prices move. If you later want a specific product, swap the search URL for a product URL and keep the tag:
+
+```html
+<!-- from -->
+<a href="https://www.amazon.com/s?k=organic+virgin+coconut+oil&tag=peteragro-20">
+<!-- to -->
+<a href="https://www.amazon.com/dp/YOURASIN?tag=peteragro-20">
+```
+
+**4. The 180-day clock.** A new Associates application needs three qualifying sales within 180 days of approval or it lapses and has to be reapplied for. If this domain is a fresh application rather than an addition to your existing account, do not let the site sit unpromoted through that window.
+
+**5. Disclosure is on every page, above the fold, and in the footer.** Required by the FTC and by the Associates operating agreement. Do not remove it from a page when editing.
+
+---
+
+## Three things to change before you launch
+
+**1. The email address.** Every page uses `hello@coconutbaby.com`, which does not exist yet. Set up forwarding (ImprovMX works the same way it does for peteragro.com) or search-and-replace it with an address you already have.
+
+**2. The links, once you have picks.** See point 3 above.
+
+**3. The palette, if you want to.** Every colour is a variable at the top of `style.css`. Change a hex value once and it changes everywhere. Nothing else needs editing.
+
+---
+
+## What this site deliberately does not have
+
+No numbered top-ten lists, because a top-ten list is a format that has to be filled whether or not ten things deserve the slot. No newsletter wall. No hardcoded product picks that rot. Each guide explains what a good one looks like on the label, and points at a search so the reader compares current prices themselves.
+
+Every guide carries a "who should skip it" section. That is the thing that makes the site worth linking to, and it is the first thing that will be tempting to cut. Do not cut it.
