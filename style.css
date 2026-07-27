@@ -253,3 +253,110 @@ figure.shot figcaption {
   margin-top: 0.6rem;
   line-height: 1.5;
 }
+
+/* ---------- Nav wrapping (nine guides) ---------- */
+
+.masthead nav { font-size: 0.86rem; gap: 0.3rem 1.05rem; }
+
+/* ---------- Magazine lead story ---------- */
+
+.lead { background: var(--cream); border-bottom: 1px solid var(--rule); }
+.lead-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 26rem;
+  object-fit: cover;
+}
+.lead-body { padding: 2.2rem 1.35rem 2.6rem; }
+.lead-body h1 { font-size: 2.15rem; margin-bottom: 0.9rem; }
+.standfirst {
+  font-size: 1.16rem;
+  color: var(--ink);
+  border-left: 3px solid var(--sage);
+  padding-left: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.continue {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--frond);
+  border-bottom: 2px solid var(--coral);
+  padding-bottom: 2px;
+}
+.continue::after { content: " \2192"; }
+.continue:hover { color: var(--coral); }
+
+/* ---------- Three questions ---------- */
+
+ul.asked { list-style: none; padding: 0; margin: 1.2rem 0 0; }
+ul.asked li {
+  border-top: 1px solid var(--rule);
+  padding: 0.95rem 0;
+}
+ul.asked li:last-child { border-bottom: 1px solid var(--rule); }
+ul.asked a {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 0.2rem;
+}
+ul.asked a:hover { text-decoration: underline; }
+ul.asked span { display: block; font-size: 0.95rem; color: var(--ink-soft); }
+
+.grid-intro { color: var(--ink-soft); }
+
+/* ---------- Article grid ---------- */
+
+.grid { display: grid; gap: 1.5rem; margin-top: 1.8rem; }
+
+.card {
+  display: block;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.card:hover { border-color: var(--sage); transform: translateY(-2px); }
+.card:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+
+.card > img {
+  display: block;
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+}
+
+.card-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 11rem;
+}
+.tile-mint   { background: var(--mint); }
+.tile-blush  { background: var(--blush); }
+.tile-butter { background: var(--butter); }
+.tile-sage   { background: #D6E7DB; }
+
+.card-body { padding: 1.15rem 1.3rem 1.35rem; }
+.card-body h3 { margin: 0 0 0.4rem; font-size: 1.12rem; color: var(--frond); }
+.card-body .eyebrow { margin-bottom: 0.4rem; }
+.card-body p { margin: 0; font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6; }
+
+@media (min-width: 44rem) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 1.6rem; }
+  .lead-body h1 { font-size: 2.8rem; }
+  .lead-body { padding: 2.8rem 1.35rem 3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover { transform: none; }
+}

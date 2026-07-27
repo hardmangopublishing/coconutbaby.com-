@@ -3,12 +3,19 @@
 A static site. No build step, no dependencies, no framework. Edit the HTML, push, and it is live in about a minute.
 
 ```
-index.html                   home — the four guides, how the site works
-coconut-oil-baby-skin.html   guide one
-balms-and-lotions.html       guide two
-coir-nursery.html            guide three
-feeding-and-weaning.html     guide four
-style.css                    all styling (the palette is set at the top)
+index.html                   home — magazine front page, lead story + article grid
+coconut-oil-baby-skin.html   skin oil
+balms-and-lotions.html       balms, lotions, diaper creams
+bath-and-washing.html        bath time
+baby-massage.html            baby massage
+coir-nursery.html            coconut fiber (coir) nursery goods
+diapering.html               diapering
+teething.html                teething
+feeding-and-weaning.html     coconut in feeding
+baby-clothes.html            baby clothes
+style.css                    all styling (palette is set at the top)
+mascot.svg  favicon.svg      the mascot and browser icon
+*.jpg                        five article photos, 1200px wide
 CNAME                        tells GitHub which domain to serve
 README.md                    this file
 ```
